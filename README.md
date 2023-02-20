@@ -10,3 +10,5 @@ It works well on Mac OS using chrome, but the seems to have some minor issues on
 Once it is installed, create a cp.joycon abstraction in Max. You can open the help file to see an implementation of the system. 
 
 Once the web server is up, you will need to pair your joycons to the web page. This information is piped into Max and sent to the first outlet of the cp.joycon abstraction.
+
+Sometimes they motion controls do not work when initally conected. I have found reconnecting the controllers tends to fix this problem.

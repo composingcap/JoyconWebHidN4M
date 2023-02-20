@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 325.0, 264.0, 29.5, 22.0 ],
+					"text" : "i"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-6",
+					"index" : 2,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 325.0, 350.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
 					"index" : 1,
@@ -57,7 +81,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 200.0, 36.0, 111.0, 100.0 ],
+					"patching_rect" : [ 239.0, 19.0, 111.0, 100.0 ],
 					"text" : "On a bang, node installs depedancies, starts the web server, then opens your default browser"
 				}
 
@@ -66,11 +90,11 @@
 				"box" : 				{
 					"id" : "obj-54",
 					"maxclass" : "newobj",
-					"numinlets" : 4,
-					"numoutlets" : 4,
-					"outlettype" : [ "bang", "bang", "bang", "" ],
-					"patching_rect" : [ 80.0, 80.0, 111.0, 22.0 ],
-					"text" : "sel bang open start"
+					"numinlets" : 5,
+					"numoutlets" : 5,
+					"outlettype" : [ "bang", "bang", "bang", "bang", "" ],
+					"patching_rect" : [ 80.0, 80.0, 135.0, 22.0 ],
+					"text" : "sel bang open start port"
 				}
 
 			}
@@ -297,8 +321,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -417,6 +439,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-35", 0 ],
+					"order" : 1,
+					"source" : [ "obj-30", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"order" : 0,
 					"source" : [ "obj-30", 0 ]
 				}
 
@@ -452,7 +483,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
-					"midpoints" : [ 150.833333333333343, 111.0, 180.0, 111.0, 180.0, 143.0, 408.0, 143.0, 408.0, 399.0, 431.5, 399.0 ],
+					"midpoints" : [ 147.5, 111.0, 180.0, 111.0, 180.0, 143.0, 408.0, 143.0, 408.0, 399.0, 431.5, 399.0 ],
 					"source" : [ "obj-54", 2 ]
 				}
 
@@ -467,8 +498,22 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-35", 0 ],
-					"midpoints" : [ 120.166666666666671, 260.5, 89.5, 260.5 ],
+					"midpoints" : [ 118.5, 260.5, 89.5, 260.5 ],
 					"source" : [ "obj-54", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-54", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}

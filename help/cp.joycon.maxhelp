@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 336.0, 218.0, 940.0, 730.0 ],
+		"rect" : [ 100.0, 100.0, 940.0, 730.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,29 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 154.777777777777771, 176.0, 150.0, 20.0 ],
+					"text" : "port"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 98.888888888888886, 175.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-125",
 					"maxclass" : "comment",
@@ -94,7 +117,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 144.0, 164.0, 150.0, 33.0 ],
+					"patching_rect" : [ 433.0, 116.0, 150.0, 33.0 ],
 					"text" : "The browser MUST be for this to work",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -274,7 +297,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 174.777777777777771, 566.0, 68.0, 24.0 ],
-					"text" : "rigth"
+					"text" : "right"
 				}
 
 			}
@@ -703,7 +726,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 213.777777777777771, 318.0, 83.777777777777771, 24.0 ],
-					"presentation_linecount" : 2,
 					"text" : "shoulder"
 				}
 
@@ -728,7 +750,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 165.777777777777771, 378.0, 68.0, 24.0 ],
-					"text" : "rigth"
+					"text" : "right"
 				}
 
 			}
@@ -1048,7 +1070,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 32.0, 199.0, 82.0, 22.0 ],
+					"patching_rect" : [ 32.0, 207.0, 82.0, 22.0 ],
 					"text" : "route left right"
 				}
 
@@ -1070,8 +1092,8 @@
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "int" ],
 					"patching_rect" : [ 32.0, 175.0, 59.0, 22.0 ],
 					"text" : "cp.joycon"
 				}
@@ -1285,6 +1307,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-60", 0 ],
 					"source" : [ "obj-27", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-3", 1 ]
 				}
 
 			}
@@ -1523,33 +1552,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "cp.joycon.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/JoyCon-WebHid/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/JoyconWebHidN4M/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "fit_jweb_to_bounds.js",
-				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "joycon-webhid.js",
-				"bootpath" : "~/Documents/Max 8/Packages/JoyCon-WebHid/misc/joyconwebhid",
+				"bootpath" : "~/Documents/Max 8/Packages/JoyconWebHidN4M/misc/joyconwebhid",
 				"patcherrelativepath" : "../misc/joyconwebhid",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "n4m.monitor.maxpat",
-				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "resize_n4m_monitor_patcher.js",
-				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

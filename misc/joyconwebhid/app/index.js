@@ -113,10 +113,10 @@ const visualize = (joyCon, packet) => {
 
     let side = "right";
       socket.emit("ctl", [side, "joystick",parseFloat(joystick.horizontal), parseFloat(joystick.vertical), buttons.rightStick]);
-      socket.emit("ctl", [side, "up",(buttons.a)]);
+      socket.emit("ctl", [side, "up",(buttons.x)]);
       socket.emit("ctl", [side, "down",(buttons.b)]);
-      socket.emit("ctl", [side, "left",(buttons.x)]);
-      socket.emit("ctl", [side, "right",(buttons.y)]);
+      socket.emit("ctl", [side, "left",(buttons.y)]);
+      socket.emit("ctl", [side, "right",(buttons.a)]);
       socket.emit("ctl", [side, "shoulder",(buttons.r)]);
       socket.emit("ctl", [side, "trigger",(buttons.zr)]);
       socket.emit("ctl", [side, "start",(buttons.plus)]);

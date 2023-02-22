@@ -54,4 +54,8 @@ io.on('connection', (socket) => {
 
 });
 
+max.addHandler("vibrate", (side, low,high,amp) => {
+	io.emit("vibrate", [side,low,high,amp]);  
+  });
+
 

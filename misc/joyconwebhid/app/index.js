@@ -195,3 +195,22 @@ showDebug.addEventListener('input', (e) => {
     ? 'flex'
     : 'none';
 });
+
+function vibrate(side, low, high, amp){
+  for (const joyCon of connectedJoyCons.values()) {
+    if (joyCon instanceof JoyConLeft && side == "left"){
+      joyCon.rumble(low,high,amp)
+    }
+
+    if (joyCon instanceof JoyConRight && side == "right"){
+      joyCon.rumble(low,high,amp)
+
+    }
+
+  }
+
+}
+socket.on("vibrate",(data)=>{
+  vibrate(data[0],data[1],data[2],data[3]);
+
+})

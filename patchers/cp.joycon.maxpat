@@ -81,7 +81,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 239.0, 19.0, 111.0, 100.0 ],
+					"patching_rect" : [ 589.0, 41.0, 111.0, 100.0 ],
 					"text" : "On a bang, node installs depedancies, starts the web server, then opens your default browser"
 				}
 
@@ -321,6 +321,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -477,6 +479,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-54", 0 ],
 					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-54", 4 ]
 				}
 
 			}
